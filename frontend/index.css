@@ -1,0 +1,52 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties (match the UI design exactly) ─────────────────── */
+:root {
+  --p1:  #F4AFFA;
+  --p6:  #B982DF;
+  --p11: #7300C0;
+  --sidebar-bg:     #1a0a2e;
+  --sidebar-active: #7300C0;
+  --white:      #ffffff;
+  --text-dark:  #1a0a2e;
+  --text-mid:   #5a4a7a;
+  --text-light: #9882b0;
+  --bg-page:    #f7f0fc;
+  --radius:     14px;
+  --radius-sm:  8px;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg-page);
+  color: var(--text-dark);
+  min-height: 100vh;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar styling ────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: #D2ABEA; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #9F59D3; }
+
+/* ── Utility classes not in Tailwind ──────────────────────────────────────── */
+.font-display { font-family: 'Outfit', sans-serif; }
+
+/* ── Transition defaults ─────────────────────────────────────────────────── */
+button, a { transition: all 0.15s ease; }
+
+/* ── Toast slide-in animation ─────────────────────────────────────────────── */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
